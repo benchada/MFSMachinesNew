@@ -1,0 +1,15 @@
+FSM fsmtwo
+VAR R, S
+
+States:
+a: out " state A ". R=R+1, sleep 5, wait
+b: out " state B ", S=S+1, sleep 3, wait
+c: out " thank you for using fsm2 " , out R , out S, end
+
+Transitions:
+
+a, b, 1
+a, a, 2
+b, b, 1
+b, a, 2
+b, c, 3

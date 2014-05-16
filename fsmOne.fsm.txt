@@ -1,0 +1,20 @@
+FSM fsmone
+VAR M, N
+
+States:
+a: out " state A ", X=X+1, sleep 10, wait
+b: out " state B ", M=M+1, sleep 20, wait
+c: out " state C ", N=N+1, sleep 20, wait
+d: out " Thank you for using fsm1 ! " , out X , out Y, out M, end
+
+Transitions:
+
+a, b, 1
+a, a, 2
+a, d, 3
+b, a, 2
+b, b, 1
+b, c, 3
+c, a, 1
+c, b, 2
+c, d, 3
